@@ -26,7 +26,7 @@ function nextPrimeNum(a) { // return the next higher prime number
     if (a % 2 === 0) {
         return false;
     }
-    console.log true;
+    return true;
 }
 
 console.log(nextPrimeNum(9));
