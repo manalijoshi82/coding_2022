@@ -21,12 +21,12 @@ console.log(insertChar("Ilovecoding", "."));
 
 /*-----------------------------------------------------------*/
 
-
+// adding new lines to test
 function nextPrimeNum(a) { // return the next higher prime number
     if (a % 2 === 0) {
         return false;
     }
-    return true;
+    console.log true;
 }
 
 console.log(nextPrimeNum(9));
