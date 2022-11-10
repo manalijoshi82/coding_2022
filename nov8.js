@@ -22,14 +22,29 @@ console.log(insertChar("Ilovecoding", "."));
 /*-----------------------------------------------------------*/
 
 // adding new lines to test
-function nextPrimeNum(a) { // return the next higher prime number
-    if (a % 2 === 0) {
-        return false;
+function nextPrimeNum(num) { // return the next higher prime number
+    let isPrime = false;
+    if (num == 1) {
+        console.log("1 is neither prime nor composite");
     }
-    console.log true;
+    else if (num > 1) {
+        for (let i = 2; i < num / 2; i++) {
+            if (num % i == 0) {
+                isPrime = true;
+            }
+        }
+    }
+
+    if (isPrime == true) {
+        return (num + " is not a prime number")
+    }
+    else {
+        return (num + " is a prime number");
+    }
+
 }
 
-console.log(nextPrimeNum(9));
+console.log(nextPrimeNum(7));
 /*-----------------------------------------------------------*/
 
 
