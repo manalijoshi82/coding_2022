@@ -1,3 +1,33 @@
+//Write a function that takes a string as argument. As it is, the string has no meaning. Increment each letter to the next letter in the alphabet. Return the correct word
+function getNextChar(str) {
+    var word = str.split("");
+    var result = [];
+    for (var i = 0; i < word.length; i++) {
+        result.push((String.fromCharCode(word[i].charCodeAt(word[i]) + 1)));
+    }
+    return result.toString();;
+
+}
+
+console.log(getNextChar("manali")); // nbobmj
+
+/*
+function getNextChar(str) {
+    let alphabets = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    let word = str.split("");
+    let result = [];
+    for (let i = 0; i < alphabets.length; i++) {
+        for (let j = 0; j < word.length; j++) {
+            if (word[j] === alphabets[i]) {
+                result.push(alphabets[i] + 1);
+            }
+        }
+    }
+    return result;
+}
+
+console.log(getNextChar("manali"));// nbobmj
+
 
 //Insert character after every n characters (backwards)
 //Write a function that takes two strings (a and b) as arguments. Beginning at the end of 'a', insert 'b' after every 3rd character of 'a'. Return the resulting string.
@@ -22,29 +52,36 @@ console.log(insertChar("Ilovecoding", "."));
 /*-----------------------------------------------------------*/
 
 // adding new lines to test
-function nextPrimeNum(num) { // return the next higher prime number
-    let isPrime = false;
+
+/*
+function isPrime(num) {
+    let isPrime = true;
     if (num == 1) {
         console.log("1 is neither prime nor composite");
     }
     else if (num > 1) {
         for (let i = 2; i < num / 2; i++) {
             if (num % i == 0) {
-                isPrime = true;
+                isPrime = false;
             }
         }
     }
 
-    if (isPrime == true) {
-        return (num + " is not a prime number")
+    if (!isPrime) {
+        return nextPrimeNum(num + 1);
     }
     else {
         return (num + " is a prime number");
     }
-
 }
 
-console.log(nextPrimeNum(7));
+function nextPrimeNum(num) { // return the next higher prime number
+
+    let nextPrime = isPrime(num);
+    return nextPrime;
+}
+
+console.log(isPrime(888));
 /*-----------------------------------------------------------*/
 
 
@@ -226,4 +263,4 @@ function myFunction(a) {
 }
 
 console.log(myFunction([1, 2, 3, 4, 5]));
-*/
+*/ 
