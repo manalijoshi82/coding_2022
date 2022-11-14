@@ -1,4 +1,71 @@
+//Write a function that takes an array as argument. It should return true if all elements in the array are equal. It should return false otherwise.
+/*
+function isAllEqual(arr) {
 
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] !== arr[0]) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+}
+*/
+
+function allAreEqual(arr) {
+    const result = arr.every(element => {
+        if (element === arr[0]) {
+            return true;
+        }
+    });
+    return result;
+
+}
+console.log(allAreEqual([1, 4, 1, 1, 1, 1]));
+
+//Write a function that takes an array of strings as argument. Return the longest string.
+/*
+function getLongestStr(arr) {
+    let max = 0;
+    let longest;
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i].length > max) {
+            max = arr[i].length;
+            longest = arr[i];
+            //console.log(longest);
+        }
+    }
+    return longest;
+}
+
+console.log(getLongestStr(["is", "my", "name", "and", "I", "love", "coding"]));
+
+//Write a function that takes an array of numbers as argument. It should return the average of the numbers.
+/*
+function getAvg(arr) {
+    var sum = 0;
+    var avg = 0;
+    for (var i = 0; i < arr.length; i++) {
+        sum = sum + arr[i];
+    }
+
+    return avg = sum / arr.length;
+}
+
+console.log(getAvg([1, 2, 3, 4, 5, 20]));
+
+//Write a function that takes an array of numbers as argument. It should return the sum of the numbers.
+/*
+function sum(arr) {
+    var sum = 0;
+    for (var i = 0; i < arr.length; i++) {
+        sum = sum + arr[i];
+    }
+    return sum;
+}
+
+console.log(sum([1, 2, 3, 4, 5]));
 
 //Write a function that takes an array of numbers as argument. It should return an array with the numbers sorted in descending order.
 /*
