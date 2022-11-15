@@ -1,3 +1,78 @@
+//Write a function that takes an array of strings as argument. Return the longest string.
+
+function longestString(arr) {
+    let length = 0;
+    let longest;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].length > length) {
+            length = arr[i].length;
+            longest = arr[i];
+        }
+    }
+    return longest;
+}
+
+console.log(longestString(['I', 'need', 'candy']));
+
+//Write a function that takes an array of numbers as argument. It should return the average of the numbers.
+/*
+function getAverage(arr) {
+    let sum = 0;
+    let avg = 0;
+    for (let num of arr) {
+        sum = sum + num;
+    }
+    return avg = sum / arr.length;
+}
+
+console.log(getAverage([10, 100, 40]));
+
+//Write a function that takes an array of numbers as argument. It should return the sum of the numbers.
+/*
+function getTotal(arr) {
+    let sum = 0;
+    for (let i of arr) {
+        sum = sum + i;
+    }
+    return sum;
+}
+
+
+console.log(getTotal([10, 100, 40]));
+//Write a function that takes two arrays as arguments. Merge both arrays and remove duplicate values. Sort the merge result in ascending order. Return the resulting array
+/*
+function getSortedArr(arr1, arr2) {
+    let arr = arr1.concat(arr2); //[1,2,3,3,4,5]
+    let uniqueArr = [];
+
+    for (let i of arr) {
+        if (uniqueArr.indexOf(i) === -1) {
+            uniqueArr.push(i);
+        }
+
+    }
+    return uniqueArr.sort(function (a, b) {
+        return b - a;
+    });
+}
+
+console.log(getSortedArr([1, 1, 3], [3, 4, 5]));
+
+//Write a function that takes arguments an arbitrary number of arrays. It should return an array containing the values of all arrays.
+/*
+function getArr(...arrays) {
+    let result = [];
+    for (let element in arrays) {
+
+
+        console.log($, { element });
+    }
+    //return result;
+}
+
+console.log(getArr(['a', 'b', 'c'], [4, 5, 6]));
+
+
 //Write a function that takes an array as argument. It should return true if all elements in the array are equal. It should return false otherwise.
 /*
 function isAllEqual(arr) {
@@ -12,7 +87,7 @@ function isAllEqual(arr) {
     }
 }
 */
-
+/*
 function allAreEqual(arr) {
     const result = arr.every(element => {
         if (element === arr[0]) {
