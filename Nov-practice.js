@@ -1,5 +1,135 @@
-//Write a function that takes an array of strings as argument. Return the longest string.
+//Write a function that takes an object as argument. It should return an object with all original object properties. except for the property with key 'b'
+/*-------------------------------------------------------------
+function getOriginalProps(obj) {
+    //let newObj = {};
+    for (key in obj) {
+        if (obj.hasOwnProperty === b) {
+            delete [b];
+            //console.log(newObj.key);
+        }
+        return obj;
+    }
 
+}
+
+console.log(getOriginalProps({ a: 1, b: 7, c: 3 }));
+/*-------------------------------------------------------------
+//Write a function that takes an object (a) as argument. Return the sum of all object values.
+/*
+function getSum(obj) {
+    var sum = 0;
+    for (key in obj) {
+        sum = sum + obj[key];
+    }
+    return sum;
+}
+
+console.log(getSum({ w: 15, x: 22, y: 13 }));
+
+//Write a function that takes an object as argument. In some cases the object contains other objects with some deeply nested properties. Return the property 'b' of object 'a' inside the original object if it exists. If not, return undefined
+/*-------------------------------------------------------------
+function getVal(obj) {
+    if (obj.a !== undefined && obj.a.b !== undefined) {
+        return obj.b;
+    }
+    return undefined;
+}
+
+console.log(getVal({ a: { b: { c: 3 } } }));
+/*-------------------------------------------------------------
+//Write a function that takes an object (a) as argument. Return an array with all object keys.
+/*
+function getArray(obj) {
+    const keys = [];
+    for (const key in obj) {
+        keys.push(key);
+    }
+    return keys;
+
+    //return Object.keys(obj);
+}
+
+console.log(getArray({ w: 15, x: 22, y: 13 }));
+
+//Write a function that takes two arrays (a and b) as arguments. Create an object that has properties with keys 'a' and corresponding values 'b'. Return the object.
+/*
+function getObj(arr1, arr2) {
+    const setObj = new Object();
+    for (var i = 0; i < arr1.length; i++) {
+        setObj[arr1[i]] = arr2[i];
+    }
+    return setObj;
+}
+
+console.log(getObj([1, 'b'], ['a', 2]));
+
+//Write a function that takes two strings (a and b) as arguments. Create an object that has a property with key 'a' and a value of 'b'. Return the object.
+/*
+function getObj(a, b) {
+    const newObj = new Object();
+    newObj[a] = b;
+
+    return newObj;
+}
+
+console.log(getObj('b', 'w'));
+//Write a function that takes a string as argument. Create an object that has a property with key 'key' and a value equal to the string. Return the object.
+/*
+function getObj(str) {
+    const value = new Object();
+    value.key = str;
+
+    return value;
+}
+
+console.log(getObj('z'));
+
+//Write a function that takes an object (a) and a string (b) as argument. Return true if the object has a property with key 'b', but only if it has a truthy value. In other words, it should not be null or undefined or false. Return false otherwise.
+/*
+function ifTruthy(obj, str) {
+    if (obj[str] !== null && obj[str] !== undefined && obj[str] !== false) {
+        return true;
+    }
+    return false;
+}
+
+console.log(ifTruthy({ x: 'a', b: 'b', z: false }, 'z'));
+
+//Write a function that takes an object (a) and a string (b) as argument. Return true if the object has a property with key 'b'. Return false otherwise. Tipp: test case 3 is a bit tricky because the value of property 'z' is undefined. But the property itself exists.
+/*
+function hasProp(obj, str) {
+    return obj.hasOwnProperty(str);
+}
+
+console.log(hasProp({ x: 'a', y: 'b', z: undefined }, 'z'));
+
+
+//Write a function that takes an object with two properties and a string as arguments. It should return the value of the property with key equal to the value of the string
+/*
+function getVal(obj, key) {
+    return obj[key];
+}
+
+console.log(getVal({ continent: 'Asia', country: 'Japan' }, 'continent'));
+
+//Write a function that takes an object with two properties as argument. It should return the value of the property with key 'prop-2'. Tipp: you might want to use the square brackets property accessor
+/*
+function getProp(obj) {
+    return obj['prop-2'];
+}
+
+console.log(getProp({ one: 1, 'prop-2': 2 }));
+
+//Write a function that takes an object with two properties as argument. It should return the value of the property with key country.
+/*
+function getCountry(obj) {
+    return obj.country;
+}
+
+console.log(getCountry({ continent: 'Asia', country: 'Japan' }));
+
+//Write a function that takes an array of strings as argument. Return the longest string.
+/*
 function longestString(arr) {
     let length = 0;
     let longest;
