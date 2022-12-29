@@ -47,16 +47,20 @@ reverseArr([2, 3, 4]);
 //Sort an array from lowest to highest
 
 function arrSortLowToHigh(arr) {
-  let lowestNum = 0;
+  let lowestNum = arr[0];
   let newArr = [];
   for (let i = 1; i < arr.length; i++) {
     if (arr[i] < lowestNum) {
       lowestNum = arr[i];
-      //   console.log(lowestNum);
     }
-    newArr.push(arr[i]);
+    let index = arr.indexOf(lowestNum);
+    // console.log(index);
+    let elmRemoved = arr.splice(index, 1);
+    newArr.push(elmRemoved);
+    console.log(elmRemoved);
   }
+  //   console.log(arr);
   return newArr;
 }
 
-console.log(arrSortLowToHigh([87, 33, 24, 1, 8, 66, 43]));
+console.log(arrSortLowToHigh([87, 33, 24, 8, 66, 43]));
