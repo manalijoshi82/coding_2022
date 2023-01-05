@@ -188,7 +188,7 @@ console.log(flattenArr([1, 2, [3, 4, 5], 6, [7, 8], 9])); */
 
 console.log(flattenArr([1, 2, [3, 4, 5], 6, [7, 8], 9])); */
 
-function uniqueCharacters(string) {
+/* function uniqueCharacters(string) {
   let chars = string.split("").sort();
   console.log(chars);
   for (let i = 0; i < chars.length; i++) {
@@ -197,6 +197,22 @@ function uniqueCharacters(string) {
     }
   }
   return true;
+} 
+
+console.log(uniqueCharacters("apple")); 
+*/
+
+function uniqueCharacters(s) {
+  let chars = {};
+  let str = s.split("");
+  //   console.log(chars);
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] in chars) {
+      console.log(chars);
+      return false;
+    } else chars[str[i]] = str[i];
+  }
+  return true;
 }
 
-console.log(uniqueCharacters("apple"));
+console.log(uniqueCharacters("aple"));
