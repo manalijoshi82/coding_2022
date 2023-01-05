@@ -144,7 +144,7 @@ function isDivisibleByTen(number) {
 console.log(isDivisibleByTen(128)); */
 
 //Return the number of vowels in a string
-
+/* 
 function numOfVowels(str) {
   let vowelsCount = 0;
   for (let i = 0; i < str.length; i++) {
@@ -161,4 +161,42 @@ function numOfVowels(str) {
   return `There are ${vowelsCount} vowels in ${str}.`;
 }
 
-console.log(numOfVowels("manali"));
+console.log(numOfVowels("manali")); */
+
+/* function flattenArr(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === Object) {
+      for (let j = 0; j < arr[i].length; j++) {
+        newArr.push(arr[i][j]);
+      }
+    } else newArr.push(arr[i]);
+  }
+  return newArr;
+}
+console.log(flattenArr([1, 2, [3, 4, 5], 6, [7, 8], 9])); */
+
+/* function flattenArr(arr) {
+  return [].concat(...arr);
+}
+
+console.log(flattenArr([1, 2, [3, 4, 5], 6, [7, 8], 9])); */
+
+/* function flattenArr(arr) {
+  return [].concat.apply([], arr);
+}
+
+console.log(flattenArr([1, 2, [3, 4, 5], 6, [7, 8], 9])); */
+
+function uniqueCharacters(string) {
+  let chars = string.split("").sort();
+  console.log(chars);
+  for (let i = 0; i < chars.length; i++) {
+    if (chars[i] === chars[i - 1]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(uniqueCharacters("apple"));
