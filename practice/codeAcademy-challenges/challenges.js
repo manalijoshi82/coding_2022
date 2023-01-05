@@ -202,6 +202,7 @@ console.log(flattenArr([1, 2, [3, 4, 5], 6, [7, 8], 9])); */
 console.log(uniqueCharacters("apple")); 
 */
 
+/* 
 function uniqueCharacters(s) {
   let chars = {};
   let str = s.split("");
@@ -215,4 +216,159 @@ function uniqueCharacters(s) {
   return true;
 }
 
-console.log(uniqueCharacters("aple"));
+console.log(uniqueCharacters("aple")); */
+
+//Convert Age to Days
+/* 
+function ageToDays(age) {
+  return age * 365;
+}
+console.log(ageToDays(65));
+
+//Return the Remainder from Two Numbers
+
+function remainder(a, b) {
+  return a % b;
+}
+console.log(remainder(1, 3)); */
+
+//Find the Perimeter of a Rectangle
+/* 
+function perimeterOfRectangle(a, b) {
+  return 2 * (a + b);
+}
+
+console.log(perimeterOfRectangle(6, 7));
+
+//Return Something to Me!
+function giveMeSomething(str) {
+  return `something ${str}`;
+}
+console.log(giveMeSomething("is better than nothing"));
+
+//Is the Number Less than or Equal to Zero?
+
+function lessThanOrEqualToZero(a) {
+  return a <= 0 ? true : false;
+}
+console.log(lessThanOrEqualToZero(5));
+
+// sum of polygon's internal angles
+function sumOfPolygon(a) {
+  return (a - 2) * 180;
+}
+
+console.log(sumOfPolygon(3));
+
+//Basketball Points
+
+function points(a, b) {
+  return a * 2 + b * 3;
+}
+console.log(points(7, 5));
+
+//Basic Variable Assignment
+function nameString(str) {
+  let result = `${str}Edabit`;
+  return result;
+}
+console.log(nameString("Matt"));
+
+//Less Than 100?
+function lessThan100(a, b) {
+  return a + b < 100 ? true : false;
+}
+console.log(lessThan100(22, 15)); */ /* 
+
+function search(arr, num) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === num) {
+      return true;
+    }
+  }
+  return false;
+}
+console.log(search([1, 2, 3], 4));
+
+function animals(animal1, animal2, animal3) {
+  return 2 * animal1 + 4 * animal2 + 4 * animal3;
+}
+
+console.log(animals(2, 3, 5));
+
+//Are the Numbers Equal?
+function isSameNum(num1, num2) {
+  return num1 === num2 ? true : false;
+}
+
+console.log(isSameNum(4, 8));
+
+//Football Points
+
+function footballPoints(wins, draw, losses) {
+  return 3 * wins + 1 * draw + 0 * losses;
+}
+console.log(footballPoints(3, 4, 2));
+
+//Convert Hours and Minutes into Seconds
+
+function hoursMinsToSeconds(hrs, mins) {
+  return hrs * 60 * 60 + mins * 60;
+}
+console.log(hoursMinsToSeconds(1, 3));
+
+//Profitable Gamble
+function profitableGamble(prob, prize, pay) {
+  return prob * prize > pay ? true : false;
+}
+console.log(profitableGamble(0.2, 50, 9));
+ */
+
+//Boolean to String Conversion
+
+/* function boolToString(flag) {
+  //   let bool = flag;
+  return flag + "foo bar";
+}
+console.log(boolToString(true)); */
+
+/* 
+//Using Arrow Functions
+let arrowFunc = (param) => param;
+
+console.log(arrowFunc(3));
+
+//Miserable Parody of a Calculator
+
+function calculator(str) {
+  let sum = Number(str.split("+")[0]) + Number(str.split("+")[1]);
+  return sum;
+}
+console.log(calculator("23+4"));
+
+//Two Makes Ten
+function makesTen(a, b) {
+  return a === 10 || b === 10 || a + b === 10 ? true : false;
+}
+console.log(makesTen(9, 9));
+*/
+//Let's Fuel Up!
+
+function calculateFuel(num) {
+  return num * 10;
+}
+
+console.log(calculateFuel(15));
+
+//Pair Management
+
+function makePair(num1, num2) {
+  return [num1, num2];
+}
+console.log(makePair(51, 21));
+
+function makeObject(key, val) {
+  return {
+    key: val,
+  };
+}
