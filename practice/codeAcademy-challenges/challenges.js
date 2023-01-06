@@ -1,4 +1,4 @@
-"use strict";
+"use strict"; /*
 //Print all even numbers from 0 – 10
 /* 
 function printAllEven() {
@@ -278,7 +278,7 @@ console.log(nameString("Matt"));
 function lessThan100(a, b) {
   return a + b < 100 ? true : false;
 }
-console.log(lessThan100(22, 15)); */ /* 
+console.log(lessThan100(22, 15)); 
 
 function search(arr, num) {
   for (let i = 0; i < arr.length; i++) {
@@ -353,7 +353,7 @@ function makesTen(a, b) {
 console.log(makesTen(9, 9));
 */
 //Let's Fuel Up!
-
+/* 
 function calculateFuel(num) {
   return num * 10;
 }
@@ -371,4 +371,71 @@ function makeObject(key, val) {
   return {
     key: val,
   };
+} */
+//Compare Strings by Count of Characters
+/* 
+function comp(str1, str2) {
+  return str1.length === str2.length ? true : false;
 }
+
+console.log(comp("ABC", "CD"));
+
+//Is the String Empty?
+function isEmpty(str) {
+  return str === "" ? true : false;
+}
+console.log(isEmpty(""));
+
+//Check if an Integer is Divisible By Five
+
+function isDivisibleByFive(num) {
+  return num % 5 === 0 ? true : false;
+}
+console.log(isDivisibleByFive(551)); */
+
+//Multiple of 100
+/* function isDivisibleByHundred(num) {
+  return num % 100 === 0 ? true : false;
+}
+console.log(isDivisibleByHundred(1003));
+
+//Recursion: Length of a String
+
+function lengthOfStr(str) {
+  return str.length;
+}
+
+console.log(lengthOfStr("apple"));
+
+//Divides Evenly
+function dividesEvenly(a, b) {
+  return a % b == 0 ? true : false;
+}
+console.log(dividesEvenly(85, 4));
+ */
+
+//Return a String as an Integer
+/* function strToInt(str) {
+  return Number(str);
+}
+console.log(strToInt("6"));
+
+//Area of a Rectangle
+function areaOfRectangle(a, b) {
+  return a <= 0 || b <= 0 ? -1 : a * b;
+}
+
+console.log(areaOfRectangle(-3, 4));
+
+//Concatenate First and Last Name into One String
+function concatName(firstName, lastName) {
+  return `${lastName}, ${firstName}`;
+}
+console.log(concatName("John", "Doe")); */
+
+//Evaluate an Equation
+function evalEquation(str) {
+  return Number(str.split("+")[0]) + Number(str.split("+")[1]);
+}
+
+console.log(evalEquation("1+2"));
