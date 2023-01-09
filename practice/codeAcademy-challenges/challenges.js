@@ -434,8 +434,106 @@ function concatName(firstName, lastName) {
 console.log(concatName("John", "Doe")); */
 
 //Evaluate an Equation
-function evalEquation(str) {
+/* function evalEquation(str) {
   return Number(str.split("+")[0]) + Number(str.split("+")[1]);
 }
 
-console.log(evalEquation("1+2"));
+console.log(evalEquation("1+2")); */
+
+// Write a JavaScript program to list the properties of a JavaScript object
+
+let student = {
+  name: "manali Joshi",
+  sclass: "VI",
+  rollno: 12,
+};
+
+/* function keys(obj) {
+  let keys = [];
+  for (let key in obj) {
+    keys.push(key);
+  }
+  return keys;
+}
+
+console.log(keys({ name: "manali Joshi", sclass: "VI", rollno: 12 })); */
+
+//Write a JavaScript program to delete the rollno property from the following object. Also print the object before or after deleting the property.
+
+/* console.log(student);
+delete student.rollno;
+console.log(student); */
+
+//Write a JavaScript program to get the length of a JavaScript object
+
+/* let objectLength = Object.keys(student).length;
+console.log(`The length of student object is ${objectLength}`); */
+
+//Write a JavaScript program to display the reading status (i.e. display book name, author name and reading status) of the following books.
+
+/* var library = [
+  {
+    author: "Bill Gates",
+    title: "The Road Ahead",
+    readingStatus: true,
+  },
+  {
+    author: "Steve Jobs",
+    title: "Walter Isaacson",
+    readingStatus: true,
+  },
+  {
+    author: "Suzanne Collins",
+    title: "Mockingjay: The Final Book of The Hunger Games",
+    readingStatus: false,
+  },
+];
+
+for (let i = 0; i < library.length; i++) {
+  if (library[i].readingStatus === false) {
+    console.log(
+      `You still need to read ${library[i].title} by ${library[i].author}`
+    );
+  } else {
+    console.log(`Already read ${library[i].title} by ${library[i].author}`);
+  }
+}
+ */
+
+//Write a JavaScript program to get the volume of a Cylinder with four decimal places using object classes
+
+//volume of a cylinder : V = πr2h
+
+/* function volOfCylinder(height, diameter) {
+  let radius = diameter / 2;
+  let volume = height * Math.pi * radius * radius;
+  return volume.toFixed(4);
+}
+
+console.log(volOfCylinder(7, 4)); */
+
+//Seven Boom!
+
+/* function sevenBoom(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 7) {
+      return "Boom";
+    }
+  }
+  return `There is no 7 in the array`;
+}
+console.log(sevenBoom([8, 6, 33, 7, 100]));
+
+//Add up the Numbers from a Single Number
+function addUp(num) {
+  let temp = 1;
+  let sum = 0;
+  while (temp <= num) {
+    sum = sum + temp;
+    // console.log(sum);
+    temp++;
+  }
+  return sum;
+}
+
+console.log(addUp(13)); */
